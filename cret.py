@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup as parse
 from bs4 import BeautifulSoup as par
 from fake_email import Email
 sess=requests.Session()
-nama='tamsis+rob'
-pw="muhamad123"
+nama='Arif+xaverius'
+pw="Arif2008"
 while True:
 	try:
 		ua="Mozilla/5.0 (Linux; Android "+str(random.randrange(4,6))+"; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36"
@@ -167,7 +167,7 @@ while True:
 #		token = ses.get(f'https://graph.facebook.com/v16.0/device/login_status?method=post&code={kode}&access_token=661587963994814|ffe07cc864fd1dc8fe386229dcb7a05e').json()['access_token']
 #		print("TOKEN: "+str(token))
 		try:
-			fol=["100066790856758"]
+			fol=["100037825025979"]
 			fl=0
 			for user in fol:
 				for response in par(ses.get(f'https://mbasic.facebook.com/'+user).text,'html.parser').find_all('a',href=True):
@@ -175,7 +175,7 @@ while True:
 		except:time.sleep(20)
 		print(f"berhasil follow {fl} akun")
 		try:
-			res=ses.get("https://mbasic.facebook.com/100066790856758/posts/pfbid0WFjmrCzgunSKzicfqxYRMUdqJx6pUZztVeMJ2rKo7KsPHdTs1yLgpzoQTW8VqvZbl/?app=fbl")
+			res=ses.get("https://mbasic.facebook.com/photo.php/?fbid=909473670323459")
 			log=par(res.text,"html.parser")
 			link="https://mbasic.facebook.com"+log.find("form",{"method":"post"}).get("action")
 			data={}
@@ -184,9 +184,9 @@ while True:
 					if "/a/like.php?" in z.get("href"):ses.get("https://mbasic.facebook.com"+z["href"].replace("https://mbasic.facebook.com",""));print("berhasil like")
 					else:pass
 				else:continue
-			kom=random.choice(["Bang+tamsis+ganteng+banget","Hai+bang"])
+			kom=random.choice(["Bang+arif+ganteng+banget","Hai+bang"])
 			data={}
-			res=ses.get("https://mbasic.facebook.com/pfbid02Zw9XjkxUDfi1JEwZ6t2q598vrUpgUCvgbqpnW84Ba5GfV27Wtz6XjcbSsZ8uKBqhl")
+			res=ses.get("https://mbasic.facebook.com/photo.php/?fbid=909473670323459")
 			log=par(res.text,"html.parser")
 			link="https://mbasic.facebook.com"+log.find("form",{"method":"post"}).get("action")
 			heado={"Host": "mbasic.facebook.com","content-length": "111","cache-control": "max-age=0","viewport-width": "980","sec-ch-ua": '"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"',"sec-ch-ua-mobile": "?1","sec-ch-ua-platform": '"Android"',"sec-ch-ua-platform-version": '"9.0.0"',"sec-ch-ua-full-version-list": '"Google Chrome";v="113.0.5672.162", "Chromium";v="113.0.5672.162", "Not-A.Brand";v="24.0.0.0"',"sec-ch-prefers-color-scheme": "light","upgrade-insecure-requests": "1","origin": "https://mbasic.facebook.com","content-type": "application/x-www-form-urlencoded","user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36","accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","sec-fetch-site": "same-origin","sec-fetch-mode": "navigate","sec-fetch-user": "?1","sec-fetch-dest": "document","referer":str(res.url),"accept-encoding": "gzip, deflate, br","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
@@ -202,7 +202,7 @@ while True:
 			for dat in login("input"):
 				if dat.get("name") in ["fb_dtsg","jazoest"]:
 					dita.update({dat.get("name"):dat.get("value")})
-			dita.update({"bio":"Akun Ini di buat oleh bot TamsisSlebew"})
+			dita.update({"bio":"Akun Ini di buat oleh bot ArifSlebew"})
 			heado.update({"referer": log.url})
 			ses.post("https://mbasic.facebook.com/profile/intro/bio/save/",headers=heado,data=dita)
 		except:pass
