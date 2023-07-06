@@ -12,7 +12,7 @@ nama='Arif+xaverius'
 pw="Arif2008"
 while True:
 	try:
-		ua="Mozilla/5.0 (Linux; Android 12;Infinix X676C Build/SP1A.210812.016; wv) "+str(random.randrange(4,6))+"; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.129 Mobile Safari/537.36 GoogleApp/13.25.10.26.arm64"
+		ua="Mozilla/5.0 (Linux; Android 12"+str(random.randrange(4,6))+"; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.129 Mobile Safari/537.36"
 		ses=requests.Session();
 		buat=Email().Mail()
 		nomer=buat["mail"]
