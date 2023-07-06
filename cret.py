@@ -20,7 +20,7 @@ while True:
 #		nomer=input("nomer acak : ")
 
 		print("email akun : "+nomer)
-		login=ses.get("https://mbasic.facebook.com/reg")
+		login=ses.get("https://free.facebook.com/reg")
 		lsd=re.search('name="lsd" value="(.*?)"',str(login.text)).group(1)
 		jazo=re.search('name="jazoest" value="(.*?)"',str(login.text)).group(1)
 		inta=re.search('name="reg_instance" value="(.*?)"',str(login.text)).group(1)
